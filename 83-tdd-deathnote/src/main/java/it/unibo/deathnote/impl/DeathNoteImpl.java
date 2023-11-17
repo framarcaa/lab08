@@ -1,25 +1,30 @@
 package it.unibo.deathnote.impl;
 
+import java.util.Objects;
+
 import it.unibo.deathnote.api.DeathNote;
 
 public class DeathNoteImpl implements DeathNote{
 
+    private String lastName;
+
     @Override
     public String getRule(int ruleNumber) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getRule'");
+        if (ruleNumber < 1 || ruleNumber > RULES.size()) {
+            throw new IllegalArgumentException("Rule number " + ruleNumber + " does not exist");
+        }
+        return RULES.get(ruleNumber - 1);
     }
 
     @Override
-    public void writeName(String name) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'writeName'");
+    public void writeName(final String name) {
+        
     }
 
     @Override
     public boolean writeDeathCause(String cause) {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'writeDeathCause'");
+        throw new UnsupportedOperationException("Unimplemented method 'writeDetails'");
     }
 
     @Override
