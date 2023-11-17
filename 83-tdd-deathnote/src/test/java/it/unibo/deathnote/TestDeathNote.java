@@ -102,5 +102,6 @@ class TestDeathNote {
         deathNote.writeDetails("get sick");
         //verify that the details have not been changed
         assertEquals("get sick", deathNote.getDeathDetails(name2));
+        /*the last assert fails because too much time has passed (6100, max 6040)  */
     }
 }
