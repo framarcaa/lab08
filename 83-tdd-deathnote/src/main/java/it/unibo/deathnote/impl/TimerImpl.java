@@ -15,8 +15,9 @@ public class TimerImpl implements Timer{
 
     @Override
     public long stop() {
+        final long time = getTime();
         isWorking = false;
-        return getTime();
+        return time;
     }
 
     @Override

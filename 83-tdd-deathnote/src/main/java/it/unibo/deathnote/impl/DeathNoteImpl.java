@@ -11,11 +11,11 @@ public class DeathNoteImpl implements DeathNote{
     private final String DEFAULT_CAUSE = "heart attack";
 
     private class Death {
-        private String cause;
-        private String details;
+        private String cause = DEFAULT_CAUSE;
+        private String details = "";
 
         private void setCause(String cause){
-            this.cause = DEFAULT_CAUSE;
+            this.cause = cause;
         }
 
         private void setDetails(String details) {
